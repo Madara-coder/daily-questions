@@ -10,7 +10,7 @@ class Factorial
         } else if ($number < 0) {
             return "The number is invalid";
         } else {
-            return $number * factorial($number-1);
+            return $number * $this->factorial($number-1);
         }
     }
 }

@@ -14,7 +14,7 @@ class LinearSearch
     }
 }
 
-object = new LinearSearch;
+const object = new LinearSearch;
 object.LinearSearch(
     [1, 5, 10, 15, 20, 25, 30, 35, 40, 45],
     10,
