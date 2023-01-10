@@ -14,4 +14,4 @@ class GreatestCommonDivisor:
             print(f"{firstNo} is the GCD")
 
 object = GreatestCommonDivisor
-object.findGcd(10, 20)
+object.findGcd(38, 40)
