@@ -22,5 +22,6 @@ class Fibonacci
 }
 
 $object = new Fibonacci;
-echo "Enter the term of number which you want";
-echo "The fibonacci total of the given term is : {$object->fibonacci(0, 1, 11)}";// first number, second number should be constant i.e 0 and 1 and the third parameter is for the term.
+$a = 11;
+echo "The term of the number that you want: {$a} and ";
+echo "the fibonacci total of the given term is : {$object->fibonacci(0, 1, 11)}";// first number, second number should be constant i.e 0 and 1 and the third parameter is for the term.
