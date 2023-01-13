@@ -9,7 +9,7 @@ class Palindrome
         $revNum = 0;
         $val = $number;
 
-        while (floor($val)) {
+        while (floor($val)) {// returns 0 at last which means false and the loop stops.
             $rem = $val % 10;
             $revNum = $revNum * 10 + $rem;
             $val = $val / 10;
