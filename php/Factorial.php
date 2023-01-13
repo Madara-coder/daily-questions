@@ -3,17 +3,17 @@
 
 class Factorial
 {
-    public function factorial(int $number): string
+    public function fact(int $number)
     {
-        if ($number === 0) {
-            return "The factorial is 1";
-        } else if ($number < 0) {
-            return "The number is invalid";
-        } else {
-            return $number * $this->factorial($number-1);
-        }
+       if ($number > 0) {
+            return ($number * $this->fact($number - 1));
+       } elseif ($number === 0) {
+            return 1;
+       } else {
+            return "Invalid number";
+       }
     }
 }
 
 $object = new Factorial;
-echo "The factorial is : {$object->factorial(5)}";
+$object->fact(5);
