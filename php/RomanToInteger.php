@@ -16,11 +16,9 @@ class RomanIntegerConversion
             "M" => 1000
         ];
         $sum = 0;
-
         for ($i = 0; $i < strlen($roman); $i++){
             $curr = $roman[$i];
             $next = $roman[$i+1];
-
             if ($array[$curr] < $array[$next]) {
                 $sum += $array[$next] - $array[$curr];
                 $i++;
@@ -28,7 +26,6 @@ class RomanIntegerConversion
                 $sum += $array[$curr];
             }
         }
-
         return $sum;
     }
 
