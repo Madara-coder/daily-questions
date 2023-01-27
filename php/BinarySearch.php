@@ -31,4 +31,4 @@ class BinarySearch
 }
 
 $object = new BinarySearch;
-$object->binarySearch(13, [1,2,3,4,5,6,7,8,11,12,16,17,20], 1); // Enter the elements in the array in ascending order.
+$object->binarySearch(13, [1,2,3,4,5,6,7,8,11,12,16,17,20], 1); // Size of the array, Enter the elements in the array in ascending order, number to be found.
