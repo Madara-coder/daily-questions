@@ -14,10 +14,10 @@
 
 class LengthLastWord
 {
-    public function lengthLastWord(string $word)
+    public function lengthLastWord(string $word): int|string
     {
         // position of last occuring space in the string
-        $pos = strrpos($word, ' ');
+        $pos = strpos($word, ' ');
 
         if (!$pos) {
            $pos = 0;
@@ -35,4 +35,4 @@ class LengthLastWord
 }
 
 $object = new LengthLastWord;
-print_r($object->lengthLastWord(("Hello Everyone ") . "\n"));
+echo $object->lengthLastWord(("Hello Everyone"));
