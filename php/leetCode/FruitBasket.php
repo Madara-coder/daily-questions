@@ -67,9 +67,9 @@ class FruitBasket
                         $repeatedNumbers[$tree[$j]]++;
                     }
                     $total++;
-                    if (count($repeatedNumbers)<=2) {
+                    if (count($repeatedNumbers) <= 2) {
                         $max = max($max, $total);
-                    } elseif (count($repeatedNumbers)>2) {
+                    } elseif (count($repeatedNumbers) > 2) {
                         break;
                     }
                 }
@@ -78,7 +78,6 @@ class FruitBasket
         }
     }
 }
-
 
 $obj = new FruitBasket;
 echo $obj->totalFruit([1,2,2,1,3]);
