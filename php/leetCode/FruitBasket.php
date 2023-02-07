@@ -80,4 +80,4 @@ class FruitBasket
 }
 
 $obj = new FruitBasket;
-echo $obj->totalFruit([1,2,2,1,3]);
+echo $obj->totalFruit([1,2,3,2,2]);
