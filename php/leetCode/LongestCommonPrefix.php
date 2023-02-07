@@ -1,6 +1,7 @@
 <?php
 
 // Leetcode Problem No: 14 (Longest Common Prefix)
+
 class LongestCommonPrefix
 {
     public function longestCommonPrefix(array $array): string

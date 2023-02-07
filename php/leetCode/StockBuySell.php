@@ -13,7 +13,7 @@ class StockBuySell
         //     $maxProfit = max($prices);
         // }
     }
-    return $maxProfit;
+    // return $maxProfit;
 }
 
 $object = new StockBuySell;
