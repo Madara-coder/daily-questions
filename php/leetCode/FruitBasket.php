@@ -1,6 +1,6 @@
 <?php
 
-// leetCode question: 904
+// leetCode question: 904 (Asked in Google Interview)
 // Title: Fruit Into Baskets.
 
 // You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented
@@ -35,14 +35,50 @@
 // 0 <= fruits[i] < fruits.length
 
 // Solution:
-
 class FruitBasket
 {
-    public  function fruitBasket(): void
+    public function totalFruit(array $tree): int
     {
-        //
+        if (count($tree) === 1) {
+            return 1;
+        } elseif (count($tree) === 2) {
+            return 2;
+        } else {
+            $repeatedFirst = [];
+            foreach ($tree as $item) {
+                if (!isset($repeatedNumbers[$item])) {
+                    $repeatedFirst[$item] = 1;
+                } else {
+                    $repeatedFirst[$item]++;
+                }
+            }
+            if (count($repeatedFirst) <= 2) {
+                return count($tree);
+            }
+            $max = PHP_INT_MIN;
+            for ($i = 0; $i < count($tree); $i++) {
+                $repeatedNumbers = [];
+                $repeatedNumbers[$tree[$i]] = 1;
+                $total = 1;
+                for ($j = ($i+1); $j < count($tree); $j++) {
+                    if (!isset($repeatedNumbers[$tree[$j]])) {
+                        $repeatedNumbers[$tree[$j]] = 1;
+                    } else {
+                        $repeatedNumbers[$tree[$j]]++;
+                    }
+                    $total++;
+                    if (count($repeatedNumbers)<=2) {
+                        $max = max($max, $total);
+                    } elseif (count($repeatedNumbers)>2) {
+                        break;
+                    }
+                }
+            }
+            return $max;
+        }
     }
 }
 
-$object = new FruitBasket;
-$object->fruitBasket();
+
+$obj = new FruitBasket;
+echo $obj->totalFruit([1,2,2,1,3]);
