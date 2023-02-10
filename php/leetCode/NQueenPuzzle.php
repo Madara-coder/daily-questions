@@ -69,4 +69,4 @@ class NQueenPuzzle
 }
 
 $object = new NQueenPuzzle;
-print_r($object->solveNQueens(13));
+print_r($object->solveNQueens(8));

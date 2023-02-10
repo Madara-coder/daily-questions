@@ -25,11 +25,33 @@
 
 class AddTwoNum
 {
-    public function addTwoNum(): void
+    /**
+     * @param ListNode $l1
+     * @param ListNode $l2
+     * @return ListNode
+     */
+
+    public function addTwoNum(array $l1, array $l2): array|int
     {
-        //
+        $carry = 0;
+        $result = new ListNode(0); // is a dummy LinkedList
+        $curNode = $result;
+
+        while ($l1 || $l2) {// while l1 or l2 is not null or false
+            $v1 = ($l1)? $l1->val : 0;
+            $v2 = ($l2)? $l2->val : 0;
+            $sum = $v1 + $v2 + $carry;
+            $carry = intval($sum / 10);
+            $sum %= 10;
+            $curNode->next = new ListNode($sum);
+            $curNode = $curNode->next;
+            // If this is a linkedList, get next. If already a null, keep it null.
+            $l1 = ($l1 != null)? $l1->next : null;
+            $l2 = ($l2 != null)? $l2->next : null;
+        }
+        return $result->next;
     }
 }
 
 $object = new AddTwoNum;
-$object->addTwoNum();
+echo $object->addTwoNum([2,4,3], [5,6,4]);
